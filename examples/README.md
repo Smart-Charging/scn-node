@@ -42,7 +42,7 @@ on prior knowledge of Ethereum blockchain technology. Don't worry if they do not
 section when we walk through the example requests.
 
 - SCN Registry smart contract deployed on a local development Ethereum blockchain (ganache)
-    - address: `0x345cA3e014Aaf5dcA488057592ee47305D9B3e10`
+    - address: `0x7ab1a34dEb3209a1d6Fd57Ae5f2f81E857bc5ba1`
     - owner: `0x627306090abaB3A6e1400e9345bC60c78a8BEf57`
 - A Wallet containing 20 addresses each pre-funded with 100 ETH
     - mnemonic: `candy maple cake sugar pudding cream honey rich smooth crumble sweet treat`
@@ -171,7 +171,7 @@ You should see the following response:
 ```
 {
     "token": {{CREDENTIALS_TOKEN_A}},
-    "versions": "http://localhost:8080/ocpi/versions"
+    "versions": "http://localhost:8080/scpi/versions"
 }
 ```
 
@@ -197,7 +197,7 @@ of endpoints supported by the node. The one we are most interested in for now is
 {
     "identifier": "credentials",
     "role": "SENDER",
-    "url": "http://localhost:8080/ocpi/2.2/credentials"
+    "url": "http://localhost:8080/scpi/2.2/credentials"
 }
 ```
 
@@ -217,7 +217,7 @@ EMSP and CPO needs not register twice.
     "status_code": 1000,
     "data": {
         "token": "ef4c3b29-5679-4bb9-8a59-4c53fc3dacef",
-        "url": "http://localhost:8080/ocpi/versions",
+        "url": "http://localhost:8080/scpi/versions",
         "roles": [
             {
                 "role": "HUB",
@@ -371,7 +371,7 @@ After 5 seconds the CPO will send the async command result (the response from th
 ```
 CPO [DE CPO] sending async STOP_SESSION response
 EMSP [DE MSP] received async command response: {"result":"ACCEPTED"}
-EMSP [DE MSP] -- POST /ocpi/emsp/2.2/commands/STOP_SESSION/2 200 59 - 0.734 ms
+EMSP [DE MSP] -- POST /scpi/emsp/2.2/commands/STOP_SESSION/2 200 59 - 0.734 ms
 ```
 
 Likewise, when we make a `POST STOP_SESSION` request, we see the following a further 5 seconds after the async response
@@ -379,8 +379,8 @@ has been sent to the EMSP:
 
 ```
 CPO [DE CPO] sending cdr after session end
-EMSP [DE MSP] -- POST /ocpi/emsp/2.2/cdrs 200 59 - 0.487 ms
-EMSP [DE MSP] -- GET /ocpi/emsp/2.2/cdrs/1 200 1124 - 0.784 ms
+EMSP [DE MSP] -- POST /scpi/emsp/2.2/cdrs 200 59 - 0.487 ms
+EMSP [DE MSP] -- GET /scpi/emsp/2.2/cdrs/1 200 1124 - 0.784 ms
 CPO [DE CPO] acknowledges cdr correctly stored on EMSP system
 ```
 

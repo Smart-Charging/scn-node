@@ -31,14 +31,14 @@ them via the sender's SCN Node<sup>2</sup>.
 For more information about the SCN, check out the [wiki](https://bitbucket.org/smartcharging/scn-node/wiki/).
 
 <sup>1</sup> The HubClientInfo module will be added in a future release.\
-<sup>2</sup> Sending a request does not guarantee its delivery. Using the _OcnRules_ module, parties are able to whitelist
+<sup>2</sup> Sending a request does not guarantee its delivery. Using the _ScnRules_ module, parties are able to whitelist
 and blacklist counter-parties. See the subsequent HTTP API documentation for more on this custom module. 
 
 ## HTTP API Documentation
 
 The [HTTP API Documentation](https://smartcharging.bitbucket.io) for the SCN Node describes endpoints which can be used 
 by administrators and users (SCPI parties). Outside of the full SCPI v2.2 API, SCN Nodes provide additional features,
-such as the custom SCPI module, _OcnRules_, as well as ways for admins to restrict use and users to query the SCN Registry.
+such as the custom SCPI module, _ScnRules_, as well as ways for admins to restrict use and users to query the SCN Registry.
 
 ## Dependencies
 
@@ -88,10 +88,10 @@ scn.node.url = http://localhost:8080
 ``` 
 
 means that parties receive module endpoints starting with `http://localhost:8080`, for 
-example `http://localhost:8080/ocpi/2.2/sender/locations` (the locations module's sender interface).
+example `http://localhost:8080/scpi/2.2/sender/locations` (the locations module's sender interface).
  
 Likewise, for a public node that accepts outside connections, the url might include the domain name, for example 
-`https://server.example.com`. This would translate to `https://server.example.com/ocpi/2.2/sender/locations`. Be sure 
+`https://server.example.com`. This would translate to `https://server.example.com/scpi/2.2/sender/locations`. Be sure 
 to include the protocol so that connected platforms can correctly parse the endpoints provided.
 
 On startup, the SCN client will ensure that the public URL set by the administrator is reachable. Additionally, there is
@@ -159,7 +159,7 @@ need to sign their response, and include it in the body. As the signature for re
 (depending on the amount of data signed), it was decided that they should be placed in the response body. 
 
 Be aware that even if an SCN Node does not require message signing, a recipient may still reject the request if it's
-missing an `SCN-Signature` (either on their own or through the _OcnRules_ module). Additionally, the SCN Node will 
+missing an `SCN-Signature` (either on their own or through the _ScnRules_ module). Additionally, the SCN Node will 
 verify signatures if they are present in a a request/response, regardless of this setting. 
 
 #### 1.7 Providing a private key
@@ -286,7 +286,7 @@ This is helpful for developing without having to worry about funding and managin
 
 ```
 scn.node.web3.provider = http://localhost:8544
-scn.node.web3.contracts.registry = 0x345ca3e014aaf5dca488057592ee47305d9b3e10
+scn.node.web3.contracts.registry = 0x5Cba9EA604Ca760177f4B6F5E2B34414930e3402
 ```
 
 ### Generating new API documentation

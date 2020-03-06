@@ -106,7 +106,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"token\": \"493a7355-28f8-4575-ad73-a5b934b5ef25\",\n    \"versions\": \"http://localhost:8080/ocpi/versions\"\n}"
+							"body": "{\n    \"token\": \"493a7355-28f8-4575-ad73-a5b934b5ef25\",\n    \"versions\": \"http://localhost:8080/scpi/versions\"\n}"
 						}
 					]
 				}
@@ -227,12 +227,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{NODE_URL}}/ocpi/versions",
+									"raw": "{{NODE_URL}}/scpi/versions",
 									"host": [
 										"{{NODE_URL}}"
 									],
 									"path": [
-										"ocpi",
+										"scpi",
 										"versions"
 									]
 								},
@@ -251,12 +251,12 @@
 											}
 										],
 										"url": {
-											"raw": "{{NODE_URL}}/ocpi/versions",
+											"raw": "{{NODE_URL}}/scpi/versions",
 											"host": [
 												"{{NODE_URL}}"
 											],
 											"path": [
-												"ocpi",
+												"scpi",
 												"versions"
 											]
 										}
@@ -287,7 +287,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status_code\": 1000,\n    \"data\": {\n        \"versions\": [\n            {\n                \"version\": \"2.2\",\n                \"url\": \"http://localhost:8080/ocpi/2.2\"\n            }\n        ]\n    },\n    \"timestamp\": \"2020-01-15T10:23:58.103Z\"\n}"
+									"body": "{\n    \"status_code\": 1000,\n    \"data\": {\n        \"versions\": [\n            {\n                \"version\": \"2.2\",\n                \"url\": \"http://localhost:8080/scpi/2.2\"\n            }\n        ]\n    },\n    \"timestamp\": \"2020-01-15T10:23:58.103Z\"\n}"
 								}
 							]
 						},
@@ -303,12 +303,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{NODE_URL}}/ocpi/2.2",
+									"raw": "{{NODE_URL}}/scpi/2.2",
 									"host": [
 										"{{NODE_URL}}"
 									],
 									"path": [
-										"ocpi",
+										"scpi",
 										"2.2"
 									]
 								},
@@ -327,12 +327,12 @@
 											}
 										],
 										"url": {
-											"raw": "{{NODE_URL}}/ocpi/2.2",
+											"raw": "{{NODE_URL}}/scpi/2.2",
 											"host": [
 												"{{NODE_URL}}"
 											],
 											"path": [
-												"ocpi",
+												"scpi",
 												"2.2"
 											]
 										}
@@ -363,12 +363,12 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status_code\": 1000,\n    \"data\": {\n        \"version\": \"2.2\",\n        \"endpoints\": [\n            {\n                \"identifier\": \"cdrs\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/ocpi/sender/2.2/cdrs\"\n            },\n            {\n                \"identifier\": \"cdrs\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/ocpi/receiver/2.2/cdrs\"\n            },\n            {\n                \"identifier\": \"commands\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/ocpi/sender/2.2/commands\"\n            },\n            {\n                \"identifier\": \"commands\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/ocpi/receiver/2.2/commands\"\n            },\n            {\n                \"identifier\": \"credentials\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/ocpi/2.2/credentials\"\n            },\n            {\n                \"identifier\": \"hubclientinfo\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/ocpi/2.2/hubclientinfo\"\n            },\n            {\n                \"identifier\": \"locations\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/ocpi/sender/2.2/locations\"\n            },\n            {\n                \"identifier\": \"locations\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/ocpi/receiver/2.2/locations\"\n            },\n            {\n                \"identifier\": \"sessions\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/ocpi/sender/2.2/sessions\"\n            },\n            {\n                \"identifier\": \"sessions\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/ocpi/receiver/2.2/sessions\"\n            },\n            {\n                \"identifier\": \"tariffs\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/ocpi/sender/2.2/tariffs\"\n            },\n            {\n                \"identifier\": \"tariffs\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/ocpi/receiver/2.2/tariffs\"\n            },\n            {\n                \"identifier\": \"tokens\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/ocpi/sender/2.2/tokens\"\n            },\n            {\n                \"identifier\": \"tokens\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/ocpi/receiver/2.2/tokens\"\n            }\n        ]\n    },\n    \"timestamp\": \"2020-01-15T10:24:32.091Z\"\n}"
+									"body": "{\n    \"status_code\": 1000,\n    \"data\": {\n        \"version\": \"2.2\",\n        \"endpoints\": [\n            {\n                \"identifier\": \"cdrs\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/scpi/sender/2.2/cdrs\"\n            },\n            {\n                \"identifier\": \"cdrs\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/scpi/receiver/2.2/cdrs\"\n            },\n            {\n                \"identifier\": \"commands\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/scpi/sender/2.2/commands\"\n            },\n            {\n                \"identifier\": \"commands\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/scpi/receiver/2.2/commands\"\n            },\n            {\n                \"identifier\": \"credentials\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/scpi/2.2/credentials\"\n            },\n            {\n                \"identifier\": \"hubclientinfo\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/scpi/2.2/hubclientinfo\"\n            },\n            {\n                \"identifier\": \"locations\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/scpi/sender/2.2/locations\"\n            },\n            {\n                \"identifier\": \"locations\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/scpi/receiver/2.2/locations\"\n            },\n            {\n                \"identifier\": \"sessions\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/scpi/sender/2.2/sessions\"\n            },\n            {\n                \"identifier\": \"sessions\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/scpi/receiver/2.2/sessions\"\n            },\n            {\n                \"identifier\": \"tariffs\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/scpi/sender/2.2/tariffs\"\n            },\n            {\n                \"identifier\": \"tariffs\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/scpi/receiver/2.2/tariffs\"\n            },\n            {\n                \"identifier\": \"tokens\",\n                \"role\": \"SENDER\",\n                \"url\": \"http://localhost:8080/scpi/sender/2.2/tokens\"\n            },\n            {\n                \"identifier\": \"tokens\",\n                \"role\": \"RECEIVER\",\n                \"url\": \"http://localhost:8080/scpi/receiver/2.2/tokens\"\n            }\n        ]\n    },\n    \"timestamp\": \"2020-01-15T10:24:32.091Z\"\n}"
 								}
 							]
 						}
 					],
-					"description": "SCPI Versions module example requests.\n\nSee [Versions documentation](https://github.com/ocpi/ocpi/blob/develop/version_information_endpoint.asciidoc) for more.",
+					"description": "SCPI Versions module example requests.\n\nSee [Versions documentation](https://github.com/scpi/scpi/blob/develop/version_information_endpoint.asciidoc) for more.",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -416,15 +416,15 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"token\": \"abc-123\",\n\t\"url\": \"http://localhost:3002/ocpi/versions\",\n\t\"roles\": [{\n\t\t\"country_code\": \"DE\",\n\t\t\"party_id\": \"MSP\",\n\t\t\"role\": \"EMSP\",\n\t\t\"business_details\": {\n\t\t\t\"name\": \"Test MSP\"\n\t\t}\n\t}]\n}"
+									"raw": "{\n\t\"token\": \"abc-123\",\n\t\"url\": \"http://localhost:3002/scpi/versions\",\n\t\"roles\": [{\n\t\t\"country_code\": \"DE\",\n\t\t\"party_id\": \"MSP\",\n\t\t\"role\": \"EMSP\",\n\t\t\"business_details\": {\n\t\t\t\"name\": \"Test MSP\"\n\t\t}\n\t}]\n}"
 								},
 								"url": {
-									"raw": "{{NODE_URL}}/ocpi/2.2/credentials",
+									"raw": "{{NODE_URL}}/scpi/2.2/credentials",
 									"host": [
 										"{{NODE_URL}}"
 									],
 									"path": [
-										"ocpi",
+										"scpi",
 										"2.2",
 										"credentials"
 									]
@@ -451,15 +451,15 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"token\": \"abc-123\",\n\t\"url\": \"http://localhost:3002/ocpi/versions\",\n\t\"roles\": [{\n\t\t\"country_code\": \"DE\",\n\t\t\"party_id\": \"MSP\",\n\t\t\"role\": \"EMSP\",\n\t\t\"business_details\": {\n\t\t\t\"name\": \"Test MSP\"\n\t\t}\n\t}]\n}"
+											"raw": "{\n\t\"token\": \"abc-123\",\n\t\"url\": \"http://localhost:3002/scpi/versions\",\n\t\"roles\": [{\n\t\t\"country_code\": \"DE\",\n\t\t\"party_id\": \"MSP\",\n\t\t\"role\": \"EMSP\",\n\t\t\"business_details\": {\n\t\t\t\"name\": \"Test MSP\"\n\t\t}\n\t}]\n}"
 										},
 										"url": {
-											"raw": "{{NODE_URL}}/ocpi/2.2/credentials",
+											"raw": "{{NODE_URL}}/scpi/2.2/credentials",
 											"host": [
 												"{{NODE_URL}}"
 											],
 											"path": [
-												"ocpi",
+												"scpi",
 												"2.2",
 												"credentials"
 											]
@@ -491,12 +491,12 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status_code\": 1000,\n    \"data\": {\n        \"token\": \"ef4c3b29-5679-4bb9-8a59-4c53fc3dacef\",\n        \"url\": \"http://localhost:8080/ocpi/versions\",\n        \"roles\": [\n            {\n                \"role\": \"HUB\",\n                \"business_details\": {\n                    \"name\": \"Smart Charging Network Node\"\n                },\n                \"party_id\": \"SCN\",\n                \"country_code\": \"DE\"\n            }\n        ]\n    },\n    \"timestamp\": \"2020-01-15T09:56:56.547Z\"\n}"
+									"body": "{\n    \"status_code\": 1000,\n    \"data\": {\n        \"token\": \"ef4c3b29-5679-4bb9-8a59-4c53fc3dacef\",\n        \"url\": \"http://localhost:8080/scpi/versions\",\n        \"roles\": [\n            {\n                \"role\": \"HUB\",\n                \"business_details\": {\n                    \"name\": \"Smart Charging Network Node\"\n                },\n                \"party_id\": \"SCN\",\n                \"country_code\": \"DE\"\n            }\n        ]\n    },\n    \"timestamp\": \"2020-01-15T09:56:56.547Z\"\n}"
 								}
 							]
 						}
 					],
-					"description": "Example SCPI credentials requests to the SCN Node.\n\nCheck [the SCPI credentials documentation](https://github.com/ocpi/ocpi/blob/develop/credentials.asciidoc) for more, which also includes a diagram of the registration process.",
+					"description": "Example SCPI credentials requests to the SCN Node.\n\nCheck [the SCPI credentials documentation](https://github.com/scpi/scpi/blob/develop/credentials.asciidoc) for more, which also includes a diagram of the registration process.",
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
@@ -545,12 +545,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{NODE_URL}}/ocpi/sender/2.2/locations",
+									"raw": "{{NODE_URL}}/scpi/sender/2.2/locations",
 									"host": [
 										"{{NODE_URL}}"
 									],
 									"path": [
-										"ocpi",
+										"scpi",
 										"sender",
 										"2.2",
 										"locations"
@@ -601,12 +601,12 @@
 											}
 										],
 										"url": {
-											"raw": "{{NODE_URL}}/ocpi/sender/2.2/locations",
+											"raw": "{{NODE_URL}}/scpi/sender/2.2/locations",
 											"host": [
 												"{{NODE_URL}}"
 											],
 											"path": [
-												"ocpi",
+												"scpi",
 												"sender",
 												"2.2",
 												"locations"
@@ -619,7 +619,7 @@
 									"header": [
 										{
 											"key": "Link",
-											"value": "http://localhost:8080/ocpi/sender/2.2/locations/page/12; rel=\"next\""
+											"value": "http://localhost:8080/scpi/sender/2.2/locations/page/12; rel=\"next\""
 										},
 										{
 											"key": "X-Total-Count",
@@ -697,12 +697,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{NODE_URL}}/ocpi/sender/2.2/locations/LOC1",
+									"raw": "{{NODE_URL}}/scpi/sender/2.2/locations/LOC1",
 									"host": [
 										"{{NODE_URL}}"
 									],
 									"path": [
-										"ocpi",
+										"scpi",
 										"sender",
 										"2.2",
 										"locations",
@@ -754,12 +754,12 @@
 											}
 										],
 										"url": {
-											"raw": "{{NODE_URL}}/ocpi/sender/2.2/locations/LOC1",
+											"raw": "{{NODE_URL}}/scpi/sender/2.2/locations/LOC1",
 											"host": [
 												"{{NODE_URL}}"
 											],
 											"path": [
-												"ocpi",
+												"scpi",
 												"sender",
 												"2.2",
 												"locations",
@@ -839,12 +839,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{NODE_URL}}/ocpi/sender/2.2/locations/LOC1/1234",
+									"raw": "{{NODE_URL}}/scpi/sender/2.2/locations/LOC1/1234",
 									"host": [
 										"{{NODE_URL}}"
 									],
 									"path": [
-										"ocpi",
+										"scpi",
 										"sender",
 										"2.2",
 										"locations",
@@ -897,12 +897,12 @@
 											}
 										],
 										"url": {
-											"raw": "{{NODE_URL}}/ocpi/sender/2.2/locations/LOC1/1234",
+											"raw": "{{NODE_URL}}/scpi/sender/2.2/locations/LOC1/1234",
 											"host": [
 												"{{NODE_URL}}"
 											],
 											"path": [
-												"ocpi",
+												"scpi",
 												"sender",
 												"2.2",
 												"locations",
@@ -983,12 +983,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{NODE_URL}}/ocpi/sender/2.2/locations/LOC1/1234/1",
+									"raw": "{{NODE_URL}}/scpi/sender/2.2/locations/LOC1/1234/1",
 									"host": [
 										"{{NODE_URL}}"
 									],
 									"path": [
-										"ocpi",
+										"scpi",
 										"sender",
 										"2.2",
 										"locations",
@@ -1042,12 +1042,12 @@
 											}
 										],
 										"url": {
-											"raw": "{{NODE_URL}}/ocpi/sender/2.2/locations/LOC1/1234/1",
+											"raw": "{{NODE_URL}}/scpi/sender/2.2/locations/LOC1/1234/1",
 											"host": [
 												"{{NODE_URL}}"
 											],
 											"path": [
-												"ocpi",
+												"scpi",
 												"sender",
 												"2.2",
 												"locations",
@@ -1088,7 +1088,7 @@
 							]
 						}
 					],
-					"description": "SCPI locations module request examples.\n\nSee [locations documentation](https://github.com/ocpi/ocpi/blob/develop/mod_locations.asciidoc) for more. ",
+					"description": "SCPI locations module request examples.\n\nSee [locations documentation](https://github.com/scpi/scpi/blob/develop/mod_locations.asciidoc) for more. ",
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
@@ -1137,12 +1137,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{NODE_URL}}/ocpi/sender/2.2/tariffs",
+									"raw": "{{NODE_URL}}/scpi/sender/2.2/tariffs",
 									"host": [
 										"{{NODE_URL}}"
 									],
 									"path": [
-										"ocpi",
+										"scpi",
 										"sender",
 										"2.2",
 										"tariffs"
@@ -1193,12 +1193,12 @@
 											}
 										],
 										"url": {
-											"raw": "{{NODE_URL}}/ocpi/sender/2.2/tariffs",
+											"raw": "{{NODE_URL}}/scpi/sender/2.2/tariffs",
 											"host": [
 												"{{NODE_URL}}"
 											],
 											"path": [
-												"ocpi",
+												"scpi",
 												"sender",
 												"2.2",
 												"tariffs"
@@ -1292,15 +1292,15 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"response_url\": \"http://localhost:3002/ocpi/emsp/2.2/commands/START_SESSION/1\",\n\t\"token\": {\n\t\t\"country_code\": \"DE\",\n\t\t\"party_id\": \"MSP\",\n\t\t\"uid\": \"0102030405\",\n\t\t\"type\": \"APP_USER\",\n\t\t\"contract_id\": \"XX-12345\",\n\t\t\"issuer\": \"Test MSP\",\n\t\t\"valid\": true,\n\t\t\"whitelist\": \"ALWAYS\",\n\t\t\"last_updated\": \"2019-08-13T14:44:25.561Z\"\n\t},\n\t\"location_id\": \"LOC1\"\n}"
+									"raw": "{\n\t\"response_url\": \"http://localhost:3002/scpi/emsp/2.2/commands/START_SESSION/1\",\n\t\"token\": {\n\t\t\"country_code\": \"DE\",\n\t\t\"party_id\": \"MSP\",\n\t\t\"uid\": \"0102030405\",\n\t\t\"type\": \"APP_USER\",\n\t\t\"contract_id\": \"XX-12345\",\n\t\t\"issuer\": \"Test MSP\",\n\t\t\"valid\": true,\n\t\t\"whitelist\": \"ALWAYS\",\n\t\t\"last_updated\": \"2019-08-13T14:44:25.561Z\"\n\t},\n\t\"location_id\": \"LOC1\"\n}"
 								},
 								"url": {
-									"raw": "{{NODE_URL}}/ocpi/receiver/2.2/commands/START_SESSION",
+									"raw": "{{NODE_URL}}/scpi/receiver/2.2/commands/START_SESSION",
 									"host": [
 										"{{NODE_URL}}"
 									],
 									"path": [
-										"ocpi",
+										"scpi",
 										"receiver",
 										"2.2",
 										"commands",
@@ -1359,15 +1359,15 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"response_url\": \"http://localhost:3002/ocpi/emsp/2.2/commands/START_SESSION/1\",\n\t\"token\": {\n\t\t\"country_code\": \"DE\",\n\t\t\"party_id\": \"MSP\",\n\t\t\"uid\": \"0102030405\",\n\t\t\"type\": \"APP_USER\",\n\t\t\"contract_id\": \"XX-12345\",\n\t\t\"issuer\": \"Test MSP\",\n\t\t\"valid\": true,\n\t\t\"whitelist\": \"ALWAYS\",\n\t\t\"last_updated\": \"2019-08-13T14:44:25.561Z\"\n\t},\n\t\"location_id\": \"LOC1\"\n}"
+											"raw": "{\n\t\"response_url\": \"http://localhost:3002/scpi/emsp/2.2/commands/START_SESSION/1\",\n\t\"token\": {\n\t\t\"country_code\": \"DE\",\n\t\t\"party_id\": \"MSP\",\n\t\t\"uid\": \"0102030405\",\n\t\t\"type\": \"APP_USER\",\n\t\t\"contract_id\": \"XX-12345\",\n\t\t\"issuer\": \"Test MSP\",\n\t\t\"valid\": true,\n\t\t\"whitelist\": \"ALWAYS\",\n\t\t\"last_updated\": \"2019-08-13T14:44:25.561Z\"\n\t},\n\t\"location_id\": \"LOC1\"\n}"
 										},
 										"url": {
-											"raw": "{{NODE_URL}}/ocpi/receiver/2.2/commands/START_SESSION",
+											"raw": "{{NODE_URL}}/scpi/receiver/2.2/commands/START_SESSION",
 											"host": [
 												"{{NODE_URL}}"
 											],
 											"path": [
-												"ocpi",
+												"scpi",
 												"receiver",
 												"2.2",
 												"commands",
@@ -1454,15 +1454,15 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"response_url\": \"http://localhost:3002/ocpi/emsp/2.2/commands/STOP_SESSION/2\",\n\t\"session_id\": \"xyzxyzyxyz\"\n}"
+									"raw": "{\n\t\"response_url\": \"http://localhost:3002/scpi/emsp/2.2/commands/STOP_SESSION/2\",\n\t\"session_id\": \"xyzxyzyxyz\"\n}"
 								},
 								"url": {
-									"raw": "{{NODE_URL}}/ocpi/receiver/2.2/commands/STOP_SESSION",
+									"raw": "{{NODE_URL}}/scpi/receiver/2.2/commands/STOP_SESSION",
 									"host": [
 										"{{NODE_URL}}"
 									],
 									"path": [
-										"ocpi",
+										"scpi",
 										"receiver",
 										"2.2",
 										"commands",
@@ -1521,15 +1521,15 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"response_url\": \"http://localhost:3002/ocpi/emsp/2.2/commands/STOP_SESSION/2\",\n\t\"session_id\": \"xyzxyzyxyz\"\n}"
+											"raw": "{\n\t\"response_url\": \"http://localhost:3002/scpi/emsp/2.2/commands/STOP_SESSION/2\",\n\t\"session_id\": \"xyzxyzyxyz\"\n}"
 										},
 										"url": {
-											"raw": "{{NODE_URL}}/ocpi/receiver/2.2/commands/STOP_SESSION",
+											"raw": "{{NODE_URL}}/scpi/receiver/2.2/commands/STOP_SESSION",
 											"host": [
 												"{{NODE_URL}}"
 											],
 											"path": [
-												"ocpi",
+												"scpi",
 												"receiver",
 												"2.2",
 												"commands",
@@ -1573,7 +1573,7 @@
 					"_postman_isSubFolder": true
 				}
 			],
-			"description": "SCPI 2.2 request examples to the SCN Node.\n\nSee [SCPI 2.2 documentation](https://github.com/ocpi/ocpi/tree/develop) for more.",
+			"description": "SCPI 2.2 request examples to the SCN Node.\n\nSee [SCPI 2.2 documentation](https://github.com/scpi/scpi/tree/develop) for more.",
 			"event": [
 				{
 					"listen": "prerequest",

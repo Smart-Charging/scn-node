@@ -85,7 +85,7 @@ start the registration process.
 The Smart Charge Point Interface enables eMobility platforms to connect to one another. The Smart Charging Network
 uses this as it's primary means of connecting such parties. It is important to have developed an SCPI version 2.2
 API beforehand, in order to connect to and use an SCN Node. This comprises, as a bare minimum, the credentials module.
-Documentation for version 2.2 can be found on https://github.com/ocpi/ocpi[SCPI @ *GitHub*].
+Documentation for version 2.2 can be found on https://github.com/scpi/scpi[SCPI @ *GitHub*].
 
 The node strives to provide all the functionality of SCPI. As this software is in alpha stage, there are currently
 some features of SCPI missing:
@@ -94,13 +94,13 @@ some features of SCPI missing:
 - Hub-specific features such as broadcast push and intelligent routing are missing.
 
 
-== _OcnRules_ module
+== _ScnRules_ module
 
 *Module Identifier: `scnrules`*
 
 *Type*: Configuration Module
 
-SCN Nodes provide an additional, optional SCPI module: _OcnRules_. This allows platforms to configure filtering
+SCN Nodes provide an additional, optional SCPI module: _ScnRules_. This allows platforms to configure filtering
 rules for their chosen SCN Node. Current filtering rules include: overriding SCN signature requirement preferences;
 blacklisting and whitelisting. Note that the blacklist and whitelist cannot be active at the same time. If the
 whitelist is active, all senders not on the whitelist will have their requests filtered by the SCN Node (they will not
@@ -114,12 +114,12 @@ to turn off signature verification.
 
 === Interfaces
 
-The _OcnRules_ module only specifies a receiver interface, implemented by the SCN Node itself. Connected platforms
+The _ScnRules_ module only specifies a receiver interface, implemented by the SCN Node itself. Connected platforms
 use this interface to update rules on their given SCN Node.
 
 ==== Receiver Interface
 
-Endpoint structure: `/ocpi/receiver/2.2/scnrules`
+Endpoint structure: `/scpi/receiver/2.2/scnrules`
 
 [cols="2,12",options="header"]
 |===
@@ -146,7 +146,7 @@ The response contains the requested object.
 [cols="3,2,10",options="header"]
 |===
 |Type |Card. |Description
-|<<scn_rules_object,OcnRules>> |1 |The requested OcnRules object.
+|<<scn_rules_object,ScnRules>> |1 |The requested ScnRules object.
 |===
 
 '''
@@ -163,7 +163,7 @@ The following parameter can be provided as URL segment.
 [cols="3,2,1,10",options="header"]
 |===
 |Parameter |Type |Required |Description
-|create_list_type |<<scn_rules_list_type_enum,OcnRulesListType>> |yes |The type of list which the new entry applies to.
+|create_list_type |<<scn_rules_list_type_enum,ScnRulesListType>> |yes |The type of list which the new entry applies to.
 |===
 
 ====== Request Body
@@ -173,8 +173,8 @@ Body is required if sending a POST request to `whitelist` or `blacklist`.
 [cols="3,2,10",options="headers"]
 |===
 |Type |Card. |Description
-|country_code |https://github.com/ocpi/ocpi/blob/master/types.asciidoc#types_cistring_type[CIString](2) |Country code of role to add to the specified list
-|party_id |https://github.com/ocpi/ocpi/blob/master/types.asciidoc#types_cistring_type[CIString](3) |Party ID (Provider ID) of role to add to the specified list
+|country_code |https://github.com/scpi/scpi/blob/master/types.asciidoc#types_cistring_type[CIString](2) |Country code of role to add to the specified list
+|party_id |https://github.com/scpi/scpi/blob/master/types.asciidoc#types_cistring_type[CIString](3) |Party ID (Provider ID) of role to add to the specified list
 |<<white_list_modules_class,WhiteListModules>> |* |The counterparty role and list of modules information to add to the specified list.
 |===
 
@@ -182,7 +182,7 @@ Body is required if sending a POST request to `whitelist` or `blacklist`.
 
 [source]
 ----
-POST to URL: https://node.scn.org/ocpi/receiver/2.2/scnrules/blacklist
+POST to URL: https://node.scn.org/scpi/receiver/2.2/scnrules/blacklist
 
     {
         "country_code": "DE",
@@ -202,7 +202,7 @@ Updates all rules entries for a platform on the SCN Node. Applies to signatures,
 [cols="3,2,1,10",options="header"]
 |===
 |Parameter |Type |Required |Description
-|list_type |<<scn_rules_type_enum,OcnRulesType>> |yes |The type of rule to update.
+|list_type |<<scn_rules_type_enum,ScnRulesType>> |yes |The type of rule to update.
 |===
 
 ====== Request Body
@@ -222,7 +222,7 @@ updating `signatures`, then no body is required.
 
 [source]
 ----
-PUT to URL: https://node.scn.org/ocpi/receiver/2.2/scnrules/whitelist
+PUT to URL: https://node.scn.org/scpi/receiver/2.2/scnrules/whitelist
 
 [
   {
@@ -245,7 +245,7 @@ or `false`).
 
 [source]
 ----
-PUT to URL: https://node.scn.org/ocpi/receiver/2.2/scnrules/signatures
+PUT to URL: https://node.scn.org/scpi/receiver/2.2/scnrules/signatures
 ----
 
 '''
@@ -262,9 +262,9 @@ The following parameters can be provided as URL segments.
 [cols="3,2,1,10",options="header"]
 |===
 |Parameter |Type |Required |Description
-|list_type |<<scn_rules_list_type_enum,OcnRulesListType>> |yes |The type of list which the new entry applies to.
-|country_code |https://github.com/ocpi/ocpi/blob/master/types.asciidoc#types_cistring_type[CIString](2) |yes |Country code of role to add to the specified list
-|party_id |https://github.com/ocpi/ocpi/blob/master/types.asciidoc#types_cistring_type[CIString](3) |yes |Party ID (Provider ID) of role to add to the specified list
+|list_type |<<scn_rules_list_type_enum,ScnRulesListType>> |yes |The type of list which the new entry applies to.
+|country_code |https://github.com/scpi/scpi/blob/master/types.asciidoc#types_cistring_type[CIString](2) |yes |Country code of role to add to the specified list
+|party_id |https://github.com/scpi/scpi/blob/master/types.asciidoc#types_cistring_type[CIString](3) |yes |Party ID (Provider ID) of role to add to the specified list
 
 |===
 
@@ -272,7 +272,7 @@ The following parameters can be provided as URL segments.
 
 [source]
 ----
-DELETE to URL: https://node.scn.org/ocpi/receiver/2.2/scnrules/blacklist/NL/XYZ
+DELETE to URL: https://node.scn.org/scpi/receiver/2.2/scnrules/blacklist/NL/XYZ
 ----
 
 '''
@@ -281,14 +281,14 @@ DELETE to URL: https://node.scn.org/ocpi/receiver/2.2/scnrules/blacklist/NL/XYZ
 
 
 [[scn_rules_object]]
-===== _OcnRules_ Object
+===== _ScnRules_ Object
 
 [cols="3,2,1,10",options="header"]
 |===
 |Property |Type |Card. |Description
 |signatures |Boolean |1 |States whether request signature verification is enabled.
-|whitelist |<<scn_rules_list_class,OcnRulesList>> |1 |Whitelist rules.
-|blacklist |<<scn_rules_list_class,OcnRulesList>> |1 |Blacklist rules.
+|whitelist |<<scn_rules_list_class,ScnRulesList>> |1 |Whitelist rules.
+|blacklist |<<scn_rules_list_class,ScnRulesList>> |1 |Blacklist rules.
 |===
 
 '''
@@ -296,7 +296,7 @@ DELETE to URL: https://node.scn.org/ocpi/receiver/2.2/scnrules/blacklist/NL/XYZ
 ==== Data Types
 
 [[scn_rules_list_class]]
-===== OcnRulesList _class_
+===== ScnRulesList _class_
 
 [cols="3,2,1,10",options="header"]
 |===
@@ -311,8 +311,8 @@ DELETE to URL: https://node.scn.org/ocpi/receiver/2.2/scnrules/blacklist/NL/XYZ
 [cols="3,2,1,10",options="header"]
 |===
 |Property |Type |Card. |Description
-|country_code |https://github.com/ocpi/ocpi/blob/master/types.asciidoc#types_cistring_type[CIString](2) |1 |Country code of role.
-|party_id |https://github.com/ocpi/ocpi/blob/master/types.asciidoc#types_cistring_type[CIString](3) |1 |Party ID (Provider ID) of role.
+|country_code |https://github.com/scpi/scpi/blob/master/types.asciidoc#types_cistring_type[CIString](2) |1 |Country code of role.
+|party_id |https://github.com/scpi/scpi/blob/master/types.asciidoc#types_cistring_type[CIString](3) |1 |Party ID (Provider ID) of role.
 |===
 
 [[white_list_modules_class]]
@@ -321,13 +321,13 @@ DELETE to URL: https://node.scn.org/ocpi/receiver/2.2/scnrules/blacklist/NL/XYZ
 [cols="3,2,1,10",options="header"]
 |===
 |Property |Type |Card. |Description
-|country_code |https://github.com/ocpi/ocpi/blob/master/types.asciidoc#types_cistring_type[CIString](2) |1 |Country code of role.
-|party_id |https://github.com/ocpi/ocpi/blob/master/types.asciidoc#types_cistring_type[CIString](3) |1 |Party ID (Provider ID) of role.
-|modules |https://github.com/ocpi/ocpi/blob/master/version_information_endpoint.asciidoc#version_information_endpoint_moduleid_enum[ModuleID] |* |A list of 0 or more
+|country_code |https://github.com/scpi/scpi/blob/master/types.asciidoc#types_cistring_type[CIString](2) |1 |Country code of role.
+|party_id |https://github.com/scpi/scpi/blob/master/types.asciidoc#types_cistring_type[CIString](3) |1 |Party ID (Provider ID) of role.
+|modules |https://github.com/scpi/scpi/blob/master/version_information_endpoint.asciidoc#version_information_endpoint_moduleid_enum[ModuleID] |* |A list of 0 or more
 |===
 
 [[scn_rules_type_enum]]
-===== OcnRulesType _Enum_
+===== ScnRulesType _Enum_
 
 [cols="2,8",options="header"]
 |===
@@ -339,7 +339,7 @@ DELETE to URL: https://node.scn.org/ocpi/receiver/2.2/scnrules/blacklist/NL/XYZ
 |===
 
 [[scn_rules_list_type_enum]]
-===== OcnRulesListType _Enum_
+===== ScnRulesListType _Enum_
 
 [cols="2,8",options="header"]
 |===

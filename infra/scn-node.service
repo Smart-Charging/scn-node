@@ -1,0 +1,13 @@
+[Unit]
+Description=Smart Charging Network Node
+After=network-online.target
+
+[Service]
+Type=simple
+User=<USER>
+WorkingDirectory=/home/<USER>/scn-node
+ExecStart=/usr/bin/java -jar -Dspring.config.location=/home/<USER>/scn-node/application.properties /home/<USER>/scn-node/build/libs/scn-node-1.0.0.jar
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
